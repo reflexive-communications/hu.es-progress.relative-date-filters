@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension key="hu.es-progress.relative-date-filters" type="module">
+  <file>relative_date_filters</file>
+  <name>Relative date filters</name>
+  <description>Additional relative date filters: before xxx days</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Sandor Semsey</author>
+    <email>semseysandor@gmail.com</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/semseysandor/hu.es-progress.relative-date-filters</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2020-06-05</releaseDate>
+  <version>0.6</version>
+  <develStage>beta</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/RelativeDateFilters</namespace>
+  </civix>
+</extension>
