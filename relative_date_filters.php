@@ -1,15 +1,15 @@
 <?php
 
 require_once 'relative_date_filters.civix.php';
-use CRM_RelativeDateFilters_ExtensionUtil as E;
 
 /**
  * Implements hook_civicrm_config().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
-function relative_date_filters_civicrm_config(&$config) {
-  _relative_date_filters_civix_civicrm_config($config);
+function relative_date_filters_civicrm_config(&$config)
+{
+    _relative_date_filters_civix_civicrm_config($config);
 }
 
 /**
@@ -17,8 +17,9 @@ function relative_date_filters_civicrm_config(&$config) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
  */
-function relative_date_filters_civicrm_xmlMenu(&$files) {
-  _relative_date_filters_civix_civicrm_xmlMenu($files);
+function relative_date_filters_civicrm_xmlMenu(&$files)
+{
+    _relative_date_filters_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -26,11 +27,12 @@ function relative_date_filters_civicrm_xmlMenu(&$files) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_install
  */
-function relative_date_filters_civicrm_install() {
-  _relative_date_filters_civix_civicrm_install();
+function relative_date_filters_civicrm_install()
+{
+    _relative_date_filters_civix_civicrm_install();
 
-  $installer=_relative_date_filters_civix_upgrader();
-  $installer->installExtension();
+    $installer = _relative_date_filters_civix_upgrader();
+    $installer->installExtension();
 }
 
 /**
@@ -38,8 +40,9 @@ function relative_date_filters_civicrm_install() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
  */
-function relative_date_filters_civicrm_postInstall() {
-  _relative_date_filters_civix_civicrm_postInstall();
+function relative_date_filters_civicrm_postInstall()
+{
+    _relative_date_filters_civix_civicrm_postInstall();
 }
 
 /**
@@ -47,11 +50,12 @@ function relative_date_filters_civicrm_postInstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_uninstall
  */
-function relative_date_filters_civicrm_uninstall() {
-  _relative_date_filters_civix_civicrm_uninstall();
+function relative_date_filters_civicrm_uninstall()
+{
+    _relative_date_filters_civix_civicrm_uninstall();
 
-  $installer=_relative_date_filters_civix_upgrader();
-  $installer->uninstallExtension();
+    $installer = _relative_date_filters_civix_upgrader();
+    $installer->uninstallExtension();
 }
 
 /**
@@ -59,11 +63,12 @@ function relative_date_filters_civicrm_uninstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_enable
  */
-function relative_date_filters_civicrm_enable() {
-  _relative_date_filters_civix_civicrm_enable();
+function relative_date_filters_civicrm_enable()
+{
+    _relative_date_filters_civix_civicrm_enable();
 
-  $installer=_relative_date_filters_civix_upgrader();
-  $installer->updateCore();
+    $installer = _relative_date_filters_civix_upgrader();
+    $installer->updateCore();
 }
 
 /**
@@ -71,11 +76,12 @@ function relative_date_filters_civicrm_enable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
  */
-function relative_date_filters_civicrm_disable() {
-  _relative_date_filters_civix_civicrm_disable();
+function relative_date_filters_civicrm_disable()
+{
+    _relative_date_filters_civix_civicrm_disable();
 
-  $installer=_relative_date_filters_civix_upgrader();
-  $installer->revertBackup();
+    $installer = _relative_date_filters_civix_upgrader();
+    $installer->revertBackup();
 }
 
 /**
@@ -83,8 +89,9 @@ function relative_date_filters_civicrm_disable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
  */
-function relative_date_filters_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _relative_date_filters_civix_civicrm_upgrade($op, $queue);
+function relative_date_filters_civicrm_upgrade($op, CRM_Queue_Queue $queue = null)
+{
+    return _relative_date_filters_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -95,8 +102,9 @@ function relative_date_filters_civicrm_upgrade($op, CRM_Queue_Queue $queue = NUL
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
  */
-function relative_date_filters_civicrm_managed(&$entities) {
-  _relative_date_filters_civix_civicrm_managed($entities);
+function relative_date_filters_civicrm_managed(&$entities)
+{
+    _relative_date_filters_civix_civicrm_managed($entities);
 }
 
 /**
@@ -108,8 +116,9 @@ function relative_date_filters_civicrm_managed(&$entities) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
  */
-function relative_date_filters_civicrm_caseTypes(&$caseTypes) {
-  _relative_date_filters_civix_civicrm_caseTypes($caseTypes);
+function relative_date_filters_civicrm_caseTypes(&$caseTypes)
+{
+    _relative_date_filters_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -122,8 +131,9 @@ function relative_date_filters_civicrm_caseTypes(&$caseTypes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
  */
-function relative_date_filters_civicrm_angularModules(&$angularModules) {
-  _relative_date_filters_civix_civicrm_angularModules($angularModules);
+function relative_date_filters_civicrm_angularModules(&$angularModules)
+{
+    _relative_date_filters_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -131,8 +141,9 @@ function relative_date_filters_civicrm_angularModules(&$angularModules) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
  */
-function relative_date_filters_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _relative_date_filters_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function relative_date_filters_civicrm_alterSettingsFolders(&$metaDataFolders = null)
+{
+    _relative_date_filters_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -142,15 +153,17 @@ function relative_date_filters_civicrm_alterSettingsFolders(&$metaDataFolders = 
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
  */
-function relative_date_filters_civicrm_entityTypes(&$entityTypes) {
-  _relative_date_filters_civix_civicrm_entityTypes($entityTypes);
+function relative_date_filters_civicrm_entityTypes(&$entityTypes)
+{
+    _relative_date_filters_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
  * Implements hook_civicrm_thems().
  */
-function relative_date_filters_civicrm_themes(&$themes) {
-  _relative_date_filters_civix_civicrm_themes($themes);
+function relative_date_filters_civicrm_themes(&$themes)
+{
+    _relative_date_filters_civix_civicrm_themes($themes);
 }
 
 // --- Functions below this ship commented out. Uncomment as required. ---
@@ -160,23 +173,23 @@ function relative_date_filters_civicrm_themes(&$themes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
  *
-function relative_date_filters_civicrm_preProcess($formName, &$form) {
-
-} // */
+ * function relative_date_filters_civicrm_preProcess($formName, &$form) {
+ *
+ * } // */
 
 /**
  * Implements hook_civicrm_navigationMenu().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  *
-function relative_date_filters_civicrm_navigationMenu(&$menu) {
-  _relative_date_filters_civix_insert_navigation_menu($menu, 'Mailings', array(
-    'label' => E::ts('New subliminal message'),
-    'name' => 'mailing_subliminal_message',
-    'url' => 'civicrm/mailing/subliminal',
-    'permission' => 'access CiviMail',
-    'operator' => 'OR',
-    'separator' => 0,
-  ));
-  _relative_date_filters_civix_navigationMenu($menu);
-} // */
+ * function relative_date_filters_civicrm_navigationMenu(&$menu) {
+ * _relative_date_filters_civix_insert_navigation_menu($menu, 'Mailings', array(
+ * 'label' => E::ts('New subliminal message'),
+ * 'name' => 'mailing_subliminal_message',
+ * 'url' => 'civicrm/mailing/subliminal',
+ * 'permission' => 'access CiviMail',
+ * 'operator' => 'OR',
+ * 'separator' => 0,
+ * ));
+ * _relative_date_filters_civix_navigationMenu($menu);
+ * } // */
